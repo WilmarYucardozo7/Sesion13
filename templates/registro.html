@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de mensajería</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/miEstilo.css')}}"/>
+    <script src="{{ url_for('static',filename='js/script.js')}}"></script>
+</head>
+<body>
+   
+
+    <div class="contend"> 
+    <form method="POST" action="" class="formulario" name="formulario" onsubmit="return validar_formulario();">
+        <h1>Registrate</h1>
+        <input type="image" src="{{ url_for('static',filename='images/mensajes.PNG')}}" width="300"
+        height="150"><br/>
+        <labe for="nombre">Usuario*</labe><br/>
+        <input type = "text" name = "usuario"/><br/><br/>        
+        <label for="correo">Correo*</label><br/>
+        <input type = "text" name = "correo"/><br/><br/>
+        <label for="contrasena">Contraseña*</label><br/>
+        <input type = "text" name = "password" id="password"/>
+        <img src="{{ url_for('static',filename='images/pwd.PNG')}}" onMouseover="mostrarPassword();" onMouseout="ocultarPassword();"/><br/><br/>
+        
+        <input type="submit" value="Registrarse" id="registro"/>
+        <a href="{{ url_for('hola_mundo')}}">Home</a>
+    </form>
+    </div>
+</body>
+</html>
